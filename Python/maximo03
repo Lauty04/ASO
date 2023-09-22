@@ -1,0 +1,24 @@
+#!/usr/bin/python3
+
+import sys
+import math
+import os
+
+
+facto = 1
+ 
+
+while True:
+    try:
+        factorial = math.factorial(facto)
+        archivo = open("numfactorial","a")
+        archivo.write("El factorial de "+str(facto)+" es " +str(factorial)+"\n")
+        facto = facto +1
+    except ValueError:
+        print("Me fue impoisble calcular el factorial de "+str(facto))    
+        print ("Por lo que el maximo factorial que puede calcular fue "+str(facto -1))
+        print("Tienes todos los factoriales en el archivo numfactorial")
+        sys.exit(1)
+
+
+sys.exit(0)

@@ -1,0 +1,54 @@
+#!/usr/bin/python3
+
+import sys
+
+print("* Primer script en python *")
+
+#El numero ha de ser un entero
+if len(sys.argv) != 2 :
+    print (" [ERROR] Dame un argumento")
+    sys.exit(1)
+
+
+
+
+#Ponemos la argumento dentro de la variable factorial
+factorial = int(sys.argv[1])
+print ("El numero es " +str(factorial)+"  ")
+
+
+
+
+if factorial > 0:
+    print("Tu número positivo es: " + str(factorial))
+    resultado = 1
+    while factorial > 1:
+        resultado = resultado * factorial
+        factorial = factorial - 1
+    print("El factorial es " + str(resultado))
+elif factorial % 2 == 0:
+    print("Tu número negativo es: " + str(factorial))
+    resultado = -1
+    vueltas = 1
+    while factorial < -1:  # Cambio la condición a factorial < -1
+        resultado = resultado * factorial
+        factorial = factorial + 1  # Cambio el signo para decrementar hacia -1
+        vueltas = vueltas +1
+    print ("Las vuelats del bucle fueron: "+str(vueltas))
+    print("El factorial de "+str(sys.argv[1])+" es " + str(resultado)+ "es positivo" )
+else:
+    resultado = 1
+    vueltas = 0
+    while factorial < -1:  # Cambio la condición a factorial < -1
+        resultado = resultado * factorial
+        factorial = factorial + 1  # Cambio el signo para decrementar hacia -1
+        vueltas = vueltas +1
+    print ("Las vuelats del bucle fueron: "+str(vueltas))
+    print("El factorial de "+str(sys.argv[1])+" es " + str(resultado * -1)+ " es negativo")
+
+
+
+
+
+
+sys.exit(0)

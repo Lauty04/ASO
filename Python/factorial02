@@ -1,0 +1,64 @@
+#!/usr/bin/python3
+
+
+import sys
+import os
+
+
+if len(sys.argv) != 2 :
+    print (" [ERROR] Necesito 2 argumentos o mas")
+    sys.exit(1)
+
+
+factorial = int(sys.argv[1])
+print ("El numero es " +str(factorial)+"  ")
+
+
+if 1 <= factorial <=5999:
+    print ("*Gracias por el número*")
+else:
+    print("Necesito un número entre 1 y 5999")
+    sys.exit(1)
+
+
+if factorial < 1000:
+    resultado = 1
+    while factorial > 1:
+        resultado = resultado * factorial
+        factorial = factorial -1
+
+    if os.path.exists("0000.txt"):
+        print (" El fichero ya existe")
+        archivo = open("0000.txt", "a")
+        archivo.write("El factorial de "+str(sys.argv[1])+" es " + str(resultado)+"\n")
+    else:
+        print("Creamos el fichero")
+        archivo = open("0000.txt",'w')
+        archivo.write("El factorial de "+str(sys.argv[1])+" es " + str(resultado)+"\n")
+    archivo.close()
+
+elif 1000 <= factorial <= 6000:
+    try:
+        resultado = 1
+        while factorial > 1:
+            resultado = resultado * factorial
+            factorial = factorial -1
+  
+        if os.path.exists("6000.txt"):
+            print (" El fichero ya existe")
+            archivo = open("6000.txt", "a")
+            archivo.write("El factorial de "+str(sys.argv[1])+" es " + str(resultado)+"\n")
+        else:
+            print("Creamos el fichero")
+            archivo = open("6000.txt",'w')
+            archivo.write("El factorial de "+str(sys.argv[1])+" es " + str(resultado)+"\n")
+        archivo.close()
+    except ValueError:
+        print ("Lo siento chaval pero el factorial de "+str(factorial)+"me es imposible calcularlo" )
+
+
+
+
+
+
+sys.exit(0)
