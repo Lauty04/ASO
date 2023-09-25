@@ -7,10 +7,13 @@
 </center>
 
 
-### 1. Crear un repositorio :
+### **1. Crear un repositorio :**
+---
 
-    Adrian creo el repositorio colaborativo justo con ese nombre (repositorio colaborativo) y me invito x enlace de github: 
-![alt text](img/1.png)
+    Adrian creo el repositorio colaborativo justo con ese nombre (repositorio colaborativo) y me invito x enlace de github :
+**[GitHub](https://github.com/Lauty04)** 
+
+ ![alt text](img/1.png)
 
     Como vemos desde el github de lautaro tmb ya esta el repositorio (Milian732/repositorio_colaborativo): 
 ![alt text](img/2.png)
@@ -18,9 +21,9 @@
     Luego lo que hicimos fue clonar el repositorio en linea al local nuestro: 
 ![alt text](img/3.png)
 
-### 2.  Trabajar por parejas sobre este repositorio creando ramas y haciendo commits sobre el mismo fichero generando quque aparezca un conflicto :
+### **2.  Trabajar por parejas sobre este repositorio creando ramas y haciendo commits sobre el mismo fichero generando quque aparezca un conflicto :**
 
-    Ahora empiza lautaro creando archivos y subiendolos al remoto (aclaramos que el ususario principal2do es sobre la maquina de lautaro), creamos el archivo adrian.txt. 
+    Ahora empiza lautaro creando archivos y subiendolos al remoto (aclaramos que el ususario principal2do es sobre la maquina de lautaro), creamos el archivo adrian.txt.
 ![alt text](img/4.png)
 
     Lo siguiente fue crear un fichero README en remoto para probar un pull a la local de lautaro(principal2do) y vemos que se realiza bien y tenmos el README:
@@ -47,8 +50,8 @@
     Ahora lo que hicimos fue merchear el main a nuestras ramas, tanto lautaro como adrian. 
 ![alt text](img/13.png)
 
-### 3. Gestión y resolución del conflicto :
-
+### **3. Gestión y resolución del conflicto :**
+---
     Para generar el conflicto decidimos editar el fichero README cada uno en su rama, procedimos a subirlo a remoto y luego la mergeamos con el main: 
 ![alt text](img/14.png)
 
@@ -75,8 +78,23 @@
     Lautaro hace un pull para ver que no de error y vemos que los ficheros tienen el mismo contenido, todo esto hablamos trabajando sobre las ramas main locales de cada uno: 
 ![alt text](img/22.png)
 
-### 4. Mostrar cómo aparece el historial de commits con las fechas y los autores, tanto desde consola como desde github :
-
+### **4. Mostrar cómo aparece el historial de commits con las fechas y los autores, tanto desde consola como desde github :**
+---
 ![alt text](img/23.png)
 
 ![alt text](img/24.png)
+
+
+
+### Probamos un trozo de código:
+
+~~~bash
+#!/bin/bash
+
+Este es un script simple en Bash
+echo "Debería aparecer el eco?"
+~~~
+
+### Alumnado: 
+    
+[Para ver la tabla hazclik aquí](/RamasMD/tabla.md) !
