@@ -1,0 +1,47 @@
+#!/usr/bin/python3
+
+import sys
+import os
+
+
+#vemos que solo lo pueda ejecutar superusuario porque sino tendremos error con el shadow
+
+
+id = os.getuid()
+if id == 0 :
+    print("---> Bienvenido <---"+"\n")
+else:
+    print("Necesitas permisos de superusuario")
+    sys.exit(1)
+
+#abrimos los ficheros para leerlas
+
+passwd = open("/etc/passwd",'r')
+shadow = open("/etc/shadow",'r')
+
+
+
+
+# leemos passwd y en el segundo bucle shadow linea por linea y filtramos con los if lo necesario
+
+for linea  in passwd :
+    login = (linea.split(':')[0])
+    shell = (linea.split(':')[6].strip())
+    #print(login + shell)
+    if shell == "/bin/bash" :
+        #print(login + shell)
+
+        for linea in shadow :
+            contraseña = (linea.split(':')[1].strip())
+            usuario = (linea.split(':')[0].strip())
+            if contraseña != '!' and contraseña != '*' :
+                print(usuario+" : "+contraseña +"\n")
+                
+
+
+
+
+
+
+passwd.close()
+shadow.close()
