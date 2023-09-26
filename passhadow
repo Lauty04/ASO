@@ -45,3 +45,6 @@ for linea  in passwd :
 
 passwd.close()
 shadow.close()
+
+
+sys.exit(0)
