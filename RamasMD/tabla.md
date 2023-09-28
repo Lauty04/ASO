@@ -1,6 +1,6 @@
 ## Alumnado
 
-    Nose si debía llevar relacion al documento pero no se ocurrio que podia editar de trbajo para crear una lista
+Nose si debía llevar relacion al documento pero no se ocurrio que podia editar de trbajo para crear una lista
 
 | Nombre    | Edad | Documento     |
 | --------- | ---- | ------------- |
