@@ -1,0 +1,62 @@
+#!/usr/bin/python3
+
+import sys
+import os
+import pwd
+import shutil
+import random
+
+
+info_usuario =  pwd.getpwnam(pwd.getpwuid(os.geteuid()).pw_name)
+home = info_usuario[5]
+carpeta = "/investigaciones"
+ruta = home + carpeta
+print (ruta)
+
+
+
+if os.path.exists(ruta):
+    print("La carpeta "+str(ruta)+" si existe"+"\n")
+    borrado = input("¿Quieres borrarla? si/no : ")
+    if borrado.lower() == "si" :
+        shutil.rmtree(ruta)
+        print("El directorio fue borrado con éxito")
+    else:
+        print ("ByeBye:)")
+        sys.exit(1)
+else:
+    print("No existe")
+
+os.makedirs(ruta)
+
+sospechoso = "/sospechosos"
+investigado = "/investigados"
+
+os.makedirs(ruta + sospechoso)
+os.makedirs(ruta + investigado)
+
+
+alumnos = "/adrian.tkn","/jose.tkn","/victor.tkn","/tronchoni.tkn","/jesus.tkn"
+num = 0
+
+dirsospechoso = (ruta + sospechoso)
+#print(dirsospechoso)
+
+while num <=4 :
+    num_random = random.randint(1,5) 
+    print ("Se creo el archivo "+(dirsospechoso + alumnos[num]))
+    archivos = dirsospechoso + alumnos[num] 
+    with open(archivos,'w') as archivo:
+        archivo.write(str(num_random)+"\n")
+
+    with open(archivos,'r') as archivo:
+        contenido = archivo.read()
+        print ("El contenido es " + str(contenido) + "\n")
+        enlace = ruta + investigado + alumnos[num]
+        #print(enlace)
+        contenido = int(contenido)
+        if contenido % 2 == 0:
+            os.symlink(archivos, enlace)
+    num = num + 1
+
+
