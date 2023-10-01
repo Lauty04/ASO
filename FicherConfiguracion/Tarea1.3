@@ -1,0 +1,37 @@
+#!/usr/bin/python3
+
+
+import sys
+import os
+import pwd
+
+
+id = os.getuid()
+usuario = pwd.getpwnam(pwd.getpwuid(os.geteuid()).pw_name)
+home = usuario[5]
+
+
+
+
+if id > 1000 :
+    print("Eres valido para ejecutar este script"+"\n")
+    if os.path.exists(home):
+        print("Su carpeta personal existe y es: "+home+"\n")
+        if os.path.isdir(home):
+            print("Es un directorio")
+    else:
+        print("No tiene carpeta personal")
+        sys.exit(1)
+else:
+    print("Necesita un usuario con  id mayor a 1000 para ejecutar este script")
+
+
+
+
+
+
+
+
+
+
+sys.exit(0)
