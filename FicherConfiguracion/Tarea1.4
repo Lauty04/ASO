@@ -13,7 +13,7 @@ for interfaz in lista:
     info = netifaces.ifaddresses(inter)
     data= info[2]
     direccion = data[0]['addr']
-    print("Tu interfaz: "+interfaz+" tiene la ip "+direccion)
+    print("Tu interfaz: [" +interfaz+"] tiene la ip "+direccion)
 
 
 
