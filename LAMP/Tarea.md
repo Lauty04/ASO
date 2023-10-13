@@ -11,9 +11,9 @@ Empezamos instalando el servidor apache y verificando que funciona.
     sudo apt install apache2
 
 
-![Texto alternativo](/imgLAMP/1.png)
+![Texto alternativo](imgLAMP/1.png)
 
-![Texto alternativo](/imgLAMP/2.png)
+![Texto alternativo](imgLAMP/2.png)
 
 ---
 ---
