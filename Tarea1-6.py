@@ -25,20 +25,30 @@ else:
 
 programa='itaca'
 ubi = '/home/principal2do/Descargas/itaca_1.0.8_amd64.deb'
+
 urlitaca = 'http://lliurex.net/focal/pool/main/i/itaca/itaca_1.0.8_amd64.deb'
+
 comando = "sudo dpkg -i "+ ubi
+
 borrar = "sudo dpkg -P itaca"
+
 dpkg = subprocess.check_output(["dpkg", "-l"], text=True) ##LISTAMOS LOS PROGRAMAS EN DPKG PARA VER SI ESTA NUESTRO PROGRAMA
 
+
+#Vemos si esta instalado
 if programa in dpkg:
     cprint('-El paquete esta instalado'+'\n','green')
     print('--Desea reinstalarlo? [y/n]')
     sigue1 = input()
     #print (sigue)
-    subprocess.run(borrar, shell=True, check=True)
-    if os.path.exists(ubi):
-        os.remove(ubi)
-    if sigue1 == 'y' or sigue1 == 'yes' or sigue1 == 's' or sigue1 == 'si' : 
+    
+    if sigue1 == 'y' or sigue1 == 'yes' or sigue1 == 's' or sigue1 == 'si' :
+    
+        subprocess.run(borrar, shell=True, check=True) #Lo borramos para no generar conflictos
+
+        if os.path.exists(ubi): # Si lo tenemos descargado lo borramos y lo volvemos a instalar
+            os.remove(ubi)
+
         urllib.request.urlretrieve(urlitaca , ubi) ## Lo descargamos
         subprocess.run(comando , shell=True)
     else:
@@ -56,33 +66,6 @@ else:
     else :
         print('Bye Bye :) 2')
         sys.exit(1)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
