@@ -5,7 +5,7 @@
           git clone https://github.com/jersonmartinez/docker-lamp.git
 Y vemos que se clono perfectamente:
 
-![Descripción de la imagen](/imgcompose/1.png)
+![Descripción de la imagen](imgcompose/1.png)
 
 En esta carpeta tenemos el dockerfile y el docker-compose que son los archivos decesarios para construir la imagen y crear los contenedores.
 
