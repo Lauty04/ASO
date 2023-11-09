@@ -1,0 +1,14 @@
+async def service_start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    entrada = update.message.text
+
+    if entrada.endswith('/service_start'):
+        ifis='[USAGE] : Debes ejecutar el comando y darme el nombre de un servicio existente en el servidor'
+    else:
+        servicio = context.args[0]
+        arranque = subprocess.run(['sudo', 'service', servicio, 'start'], capture_output=True, text=True)
+        ejecuto = arranque.stdout
+        arrancado = 'El servicio fue inicializado'
+
+
+    await update.message.reply_text(arrancado)
+
