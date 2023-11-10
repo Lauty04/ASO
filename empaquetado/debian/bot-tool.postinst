@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+echo " Restarting systemctl"
+
+systemctl restart bot.service 
+
+
+exit 0
+

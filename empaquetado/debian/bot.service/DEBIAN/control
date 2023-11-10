@@ -1,0 +1,12 @@
+Package: bot.service
+Version: 0.69.3
+Architecture: all
+Maintainer: Lautaro Lorca  <lorcalautaro63@gmail.com>
+Installed-Size: 9
+Depends: bsdutils, joe
+Section: utils
+Priority: optional
+Description: el seervicio de telegram
+ Ejemplo de servicio empaquetado
+ por la mejor clase del mundo,
+ que es ASIR 2.

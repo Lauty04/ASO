@@ -1,0 +1,6 @@
+bot.service (0.69.3) jammy; urgency=high
+
+  * New version
+  * Added joe as a dependence
+
+ -- lautaro <principal2do@principal2do-VirtualBox>  Tue, 31 Oct 2023 12:56:01 +0100
