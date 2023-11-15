@@ -1,0 +1,10 @@
+[Unit]
+Description=Telegram Bot ASIR
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=%i
+ExecStart=/usr/bin/bot.py

@@ -1,0 +1,13 @@
+Package: bot-tool
+Version: 0.69.3
+Architecture: all
+Maintainer: Lautaro Lorca  <lorcalautaro63@gmail.com>
+Installed-Size: 29
+Pre-Depends: python3-pip
+Depends: python3-python-telegram-bot, nmap, python3-psutil
+Section: utils
+Priority: optional
+Description: Servicio de Bot-Telegram
+ Ejemplo de servicio empaquetado
+ por la mejor clase del mundo,
+ que es ASIR 2.
